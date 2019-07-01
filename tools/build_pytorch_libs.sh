@@ -124,7 +124,7 @@ TORCH_LIB_DIR="$BASE_DIR/torch/lib"
 INSTALL_DIR="$TORCH_LIB_DIR/tmp_install"
 THIRD_PARTY_DIR="$BASE_DIR/third_party"
 
-C_FLAGS=""
+C_FLAGS="-D_GLIBCXX_USE_CXX11_ABI=1"
 # Workaround OpenMPI build failure
 # ImportError: /build/pytorch-0.2.0/.pybuild/pythonX.Y_3.6/build/torch/_C.cpython-36m-x86_64-linux-gnu.so: undefined symbol: _ZN3MPI8Datatype4FreeEv
 # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=686926
